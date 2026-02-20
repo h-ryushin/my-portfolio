@@ -21,7 +21,7 @@ export const Navbar = () => {
         {/* 右側のメニュー：大文字・広めの字間 */}
         <nav className="flex gap-12 text-xs font-light tracking-[0.2em] text-gray-600">
           <Link href="#projects" className="hover:text-black transition-colors">WORKS</Link>
-          <Link href="#about" className="hover:text-black transition-colors">ABOUT</Link>
+          <Link href="/about" className="hover:text-black transition-colors">ABOUT</Link>
           <Link href="#contact" className="hover:text-black transition-colors">CONTACT</Link>
         </nav>
       </div>
