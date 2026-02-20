@@ -6,10 +6,8 @@ import Image from "next/image";
 
 export const Navbar = () => {
   return (
-    <header className="fixed top-0 w-full z-50">
-      <div className="max-w-7xl mx-auto px-8 h-20 flex justify-between items-center">
-
-        {/* 左上のロゴ：Topへ戻る */}
+    <header className="fixed top-0 w-full z-70 mt-5">
+      <div className="max-w-[95%] mx-auto px-8 h-20 flex justify-between items-center">
         <Link href="/" className="hover:opacity-70 transition-opacity">
           <img
             src="/images/icon.png"
@@ -17,12 +15,10 @@ export const Navbar = () => {
             className="w-20 h-20 object-contain"
           />
         </Link>
-
-        {/* 右側のメニュー：大文字・広めの字間 */}
-        <nav className="flex gap-12 text-xs font-light tracking-[0.2em] text-gray-600">
-          <Link href="#projects" className="hover:text-black transition-colors">WORKS</Link>
-          <Link href="/about" className="hover:text-black transition-colors">ABOUT</Link>
-          <Link href="/contact" className="hover:text-black transition-colors">CONTACT</Link>
+        <nav className="flex gap-12 font-medium tracking-[0.1em] text-[#a28d69]" style={{ fontSize: '1.4vw' }}>
+          <Link href="/" className="hover:opacity-70 transition-colors text-inherit">WORKS</Link>
+          <Link href="/about" className="hover:text-black transition-colors text-inherit">ABOUT</Link>
+          <Link href="/contact" className="hover:text-black transition-colors text-inherit">CONTACT</Link>
         </nav>
       </div>
     </header>
