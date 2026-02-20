@@ -19,3 +19,21 @@ body {
   padding: 0;
   
 }
+@layer base {
+  :root {
+    --font-reitam: 'reitam';
+  }
+
+  @font-face {
+    font-family: 'reitam';
+    src: url('/fonts/Reitam Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  html {
+    /* 当時のCSSの優先順位を再現 */
+    font-family: var(--font-reitam), "Yu Gothic", "Meiryo", sans-serif;
+    background-color: #ECECE6;
+  }
+}

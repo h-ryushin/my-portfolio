@@ -24,13 +24,16 @@ export default function Home() {
   return (
     <div>
       <section className="w-full h-screen flex flex-col items-center justify-center px-12 text-center">
-        <h1 className="text-5xl md:text-7xl font-bold tracking-[0.3em] mb-6">
-          HIRANO RYUSHIN
-        </h1>
-        <p className="text-lg md:text-xl opacity-80 max-w-2xl tracking-widest">
-          Welcome to my portfolio site, where I showcase my work, skills, and passion.
-        </p>
-      </section>
+  {/* フォントサイズを小さくし、font-serifで明朝体に、trackingで字間を広く */}
+  <h1 className="text-2xl md:text-4xl font-bold tracking-[0.4em] mb-8 font-serif uppercase">
+    HIRANO RYUSHIN
+  </h1>
+  
+  {/* 説明文も小さく、より軽い印象に */}
+  <p className="text-[10px] md:text-[12px] opacity-70 tracking-[0.3em] font-serif leading-loose whitespace-nowrap">
+  Welcome to my portfolio site, where I showcase my work, skills, and passion.
+</p>
+</section>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 max-w-6xl mx-auto">
         {works.map((work, index) => (
           <Link href={work.url} key={index} className="group cursor-pointer">

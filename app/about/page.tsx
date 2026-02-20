@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image';
 
 // データベースのような役割をするデータ群
 const TIMELINE_DATA = [
@@ -30,18 +31,23 @@ export default function AboutPage() {
     return (
         <main className="min-h-screen bg-[#EBECE6] text-[#1a1a1a] font-serif px-8 md:px-12 py-32">
             <section className="w-full h-screen flex flex-col items-center justify-center px-12 text-center">
-                <h1 className="text-5xl md:text-7xl font-bold tracking-[0.3em] mb-6">
-                    HIRANO RYUSHIN
-                </h1>
-                <p className="text-lg md:text-xl opacity-80 max-w-2xl tracking-widest">
-                    Welcome to my portfolio site, where I showcase my work, skills, and passion.
-                </p>
+                <Image
+                    src="/images/about-top.png"
+                    alt="icon"
+                    fill
+                    className="object-cover"
+                    priority
+                />
             </section>
             <div className="max-w-5xl mx-auto mt-0">
                 {/* --- 名前セクション --- */}
                 <section className="flex justify-between items-start mb-20">
                     <div>
-                        <h1 className="text-5xl font-bold tracking-tighter mb-4">HIRANO RYUSHIN</h1>
+                        <h1 className="text-5xl font-bold tracking-tighter mb-4"
+                            style={{ fontFamily: 'reitam, sans-serif' }}
+                        >
+                            HIRANO RYUSHIN
+                        </h1>
                     </div>
                     <p className="text-xl text-gray-400">| STUDENT</p>
                 </section>

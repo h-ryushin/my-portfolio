@@ -53,7 +53,7 @@ export default function ContactPage() {
                     </div>
 
                     {/* 送信ボタン（おまけ） */}
-                    <div className="flex justify-end pt-8">
+                    <div className="flex justify-center pt-8">
                         <button
                             type="submit"
                             className="px-12 py-4 bg-[#1a1a1a] text-white hover:bg-gray-800 transition-colors tracking-widest text-sm"
