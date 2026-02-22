@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow");
 @import url("https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500,700,800,900");
 @import "tailwindcss";
-/* src/app/globals.css */
-@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -17,7 +15,6 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: "reitam", 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-  /* セリフ体を使うと一気に雰囲気が近づきます */
   margin: 0;
   padding: 0;
   ol {
@@ -43,7 +40,6 @@ a {
   }
 
   html {
-    /* 当時のCSSの優先順位を再現 */
     font-family: var(--font-reitam), "Yu Gothic", "Meiryo", sans-serif;
     background-color: #ECECE6;
   }

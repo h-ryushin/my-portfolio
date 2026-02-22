@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
 
-// データベースのような役割をするデータ群
 const TIMELINE_DATA = [
     { year: "2016年", title: "淡水魚ライフワークプロジェクトに参加", desc: "中学校の「ライフワーク」プロジェクトで、淡水魚の取材とレポート作成に取り組み、江ノ島水族館や東京海洋大学などに取材。学んだことをレポートにまとめ、学内発表を行った。" },
     { year: "2023年", title: "Web制作の独学開始", desc: "大学2年後期からHTML/CSS/JavaScriptを独学で学び、Webサイト制作のスキルを習得。プログラミングやデザインの基礎を身につけ、個人制作で実践。" },
@@ -31,10 +30,7 @@ const EDUCATION_DATA = [
 
 export default function AboutPage() {
     return (
-        /* mainのpxを削除し、pt-0にすることで写真が画面上部・左右の端までピッタリ広がります */
         <main className="min-h-screen bg-[#EBECE6] text-[#1a1a1a] pb-5 pt-0">
-
-            {/* 写真セクション：w-fullで画面端まで表示。スマホでは高さ半分(50vh) */}
             <section className="relative w-full h-[50vh] md:h-[100vh] overflow-hidden mb-20">
                 <Image
                     src="/images/about-top.png"
@@ -45,9 +41,7 @@ export default function AboutPage() {
                 />
             </section>
 
-            {/* コンテンツ部分：ここだけに px-8 md:px-12 を適用して横幅を整えます */}
             <div className="max-w-5xl mx-auto px-8 md:px-12">
-                {/* --- 名前セクション --- */}
                 <p className='text-2xl font-bold mb-5'
                     style={{ fontFamily: 'reitam, sans-serif' }}
                 >
@@ -63,8 +57,6 @@ export default function AboutPage() {
                     </div>
                     <p className="text-sm md:text-xl text-gray-400">| STUDENT</p>
                 </section>
-
-                {/* --- 取り組みセクション --- */}
                 <section className="mb-24">
                     <h2 className="text-xl font-bold border-b border-black pb-2 mb-10 uppercase tracking-widest">これまでの主な取り組み</h2>
                     <div className="space-y-12">
@@ -77,7 +69,6 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-                {/* --- スキルセクション --- */}
                 <section className="mb-24">
                     <h2 className="text-xl font-bold border-b border-black pb-2 mb-8 uppercase tracking-widest">スキル</h2>
                     <ul className="space-y-4">
@@ -89,8 +80,6 @@ export default function AboutPage() {
                         ))}
                     </ul>
                 </section>
-
-                {/* --- 学歴セクション --- */}
                 <section className="mb-24">
                     <h2 className="text-xl font-bold border-b border-black pb-2 mb-8 uppercase tracking-widest">学歴</h2>
                     <div className="space-y-3 text-sm">
