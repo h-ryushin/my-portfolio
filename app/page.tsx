@@ -30,11 +30,14 @@ export default function Home() {
   </h1>
   
   {/* 説明文も小さく、より軽い印象に */}
-  <p className="text-[10px] md:text-[12px] opacity-70 tracking-[0.3em] font-serif leading-loose whitespace-nowrap">
+  <p className="hidden sm:block text-[10px] md:text-[12px] opacity-70 tracking-[0.3em] font-serif leading-loose whitespace-nowrap">
   Welcome to my portfolio site, where I showcase my work, skills, and passion.
 </p>
+  <p className="block sm:hidden text-[10px] md:text-[12px] opacity-70 tracking-[0.3em] font-serif leading-loose whitespace-nowrap">
+  Welcome to my portfolio site,<br /> where I showcase my work, skills, and passion.
+</p>
 </section>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 max-w-6xl mx-auto px-10">
         {works.map((work, index) => (
           <Link href={work.url} key={index} className="group cursor-pointer">
             <div className="flex flex-col gap-4">

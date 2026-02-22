@@ -12,13 +12,13 @@ export const Navbar = () => {
           <img
             src="/images/icon.png"
             alt="Logo"
-            className="w-20 h-20 object-contain"
+            className="w-12 h-12 md:h-20 md:w-20 object-contain"
           />
         </Link>
         <nav className="flex gap-12 font-medium tracking-[0.1em] text-[#a28d69]" style={{ fontSize: '1.4vw' }}>
           <Link href="/" className="hover:opacity-70 transition-colors text-inherit">WORKS</Link>
-          <Link href="/about" className="hover:text-black transition-colors text-inherit">ABOUT</Link>
-          <Link href="/contact" className="hover:text-black transition-colors text-inherit">CONTACT</Link>
+          <Link href="/about" className="hover:opacity-70 transition-colors text-inherit">ABOUT</Link>
+          <Link href="/contact" className="hover:opacity-70 transition-colors text-inherit">CONTACT</Link>
         </nav>
       </div>
     </header>

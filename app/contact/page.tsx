@@ -1,17 +1,23 @@
 import Image from "next/image";
+
 export default function ContactPage() {
     return (
-        <main className="min-h-screen bg-[#EBECE6] text-[#1a1a1a] font-serif px-8 md:px-12 py-32">
-            <section className="w-full h-screen flex flex-col items-center justify-center px-12 text-center">
+        /* mainのpxを削除し、pt-0にすることで写真が画面上部・左右の端までピッタリ広がります */
+        <main className="min-h-screen bg-[#EBECE6] text-[#1a1a1a] pb-32 pt-0">
+            
+            {/* 写真セクション：スマホでは高さ半分(50vh)、PCでは少し余裕を持たせた(80vh)設定 */}
+            <section className="relative w-full h-[50vh] md:h-screen overflow-hidden mb-20">
                 <Image
                     src="/images/contact-top.png"
-                    alt="icon"
+                    alt="contact visual"
                     fill
-                    className="object-cover"
+                    className="object-cover object-[center_20%] md:object-center" 
                     priority
                 />
             </section>
-            <div className="max-w-4xl mx-auto">
+
+            {/* コンテンツ部分：ここだけに px-8 md:px-12 を適用して横幅を整えます */}
+            <div className="max-w-4xl mx-auto px-8 md:px-12">
 
                 {/* タイトルセクション */}
                 <section className="mb-16">
@@ -52,7 +58,7 @@ export default function ContactPage() {
                         ></textarea>
                     </div>
 
-                    {/* 送信ボタン（おまけ） */}
+                    {/* 送信ボタン */}
                     <div className="flex justify-center pt-8">
                         <button
                             type="submit"

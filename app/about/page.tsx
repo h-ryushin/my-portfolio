@@ -8,11 +8,11 @@ const TIMELINE_DATA = [
     { year: "2023年", title: "Web制作インターンシップに参加", desc: "フルリモートでのWeb制作インターンシップに参加し、クライアントのニーズに応じたWebサイトの制作を担当。デザインと機能性を兼ね備えたサイトを納品。" },
     { year: "2024年", title: "ライフイズテックにてUnityメンターとして中高生を指導開始", desc: "大学の友人の勧めでUnityコースに参加し、VRゲームの制作にも挑戦。Web制作スキルと併用し、ゲーム開発の新しい分野に挑戦。中高生のゲーム開発を指導。" },
     { year: "2024年", title: "Navi-奈良市_AI1DAY (Web)に参加", desc: "生成AIを使って、奈良市をテーマにしたWebサイトの構成ができ、また、構成に沿ったWebサイト作成を手助けする。プログラミングが嫌いな子もいた中で、班の全員が納得いくものが完成できました。" },
+    { year: "2025年", title: "Re-Build in 愛知 2025 優秀賞 受賞", desc: "サイバーエージェント主催のハッカソンにて、戦略的オンラインゲームをチームで開発。技術面では、オブジェクトプールを活用した高負荷に耐えうる射撃システムの実装や、スキルの内部ロジック、サウンド制御などを担当。パフォーマンスを意識した設計が評価され、優秀賞を受賞しました。" },
 ];
 
 const SKILLS_DATA = [
     { name: "Python", level: "初級", desc: "学校などで習ったことができる" },
-    { name: "JavaScript", level: "初級", desc: "簡単なアニメーションを追加できる" },
     { name: "HTML/CSS", level: "中級", desc: "Webサイトを依頼されてつくったことがある　中高生向け指導経験あり" },
     { name: "React", level: "初級", desc: "このWebサイトを作成" },
     { name: "Unity", level: "中級", desc: "2D・3Dゲームの基礎制作が可能　中高生向け指導経験あり" },
@@ -26,30 +26,42 @@ const EDUCATION_DATA = [
     { date: "2021年3月", event: "私立名城大学附属高校　卒業" },
     { date: "2022年4月", event: "名城大学情報工学部情報工学科　入学" },
     { date: "2026年3月", event: "名城大学情報工学部情報工学科　卒業予定" },
+    { date: "2026年4月", event: "名城大学大学院 情報工学研究科 入学予定" }
 ];
+
 export default function AboutPage() {
     return (
-        <main className="min-h-screen bg-[#EBECE6] text-[#1a1a1a] font-serif px-8 md:px-12 py-32">
-            <section className="w-full h-screen flex flex-col items-center justify-center px-12 text-center">
+        /* mainのpxを削除し、pt-0にすることで写真が画面上部・左右の端までピッタリ広がります */
+        <main className="min-h-screen bg-[#EBECE6] text-[#1a1a1a] pb-5 pt-0">
+
+            {/* 写真セクション：w-fullで画面端まで表示。スマホでは高さ半分(50vh) */}
+            <section className="relative w-full h-[50vh] md:h-[100vh] overflow-hidden mb-20">
                 <Image
                     src="/images/about-top.png"
-                    alt="icon"
+                    alt="about visual"
                     fill
-                    className="object-cover"
+                    className="object-cover object-[center_20%] md:object-center"
                     priority
                 />
             </section>
-            <div className="max-w-5xl mx-auto mt-0">
+
+            {/* コンテンツ部分：ここだけに px-8 md:px-12 を適用して横幅を整えます */}
+            <div className="max-w-5xl mx-auto px-8 md:px-12">
                 {/* --- 名前セクション --- */}
-                <section className="flex justify-between items-start mb-20">
+                <p className='text-2xl font-bold mb-5'
+                    style={{ fontFamily: 'reitam, sans-serif' }}
+                >
+                    平野龍真
+                </p>
+                <section className="flex flex-col md:flex-row justify-between items-start mb-20 gap-4">
                     <div>
-                        <h1 className="text-5xl font-bold tracking-tighter mb-4"
+                        <h1 className="text-5xl md:text-6xl font-bold tracking-tighter mb-4"
                             style={{ fontFamily: 'reitam, sans-serif' }}
                         >
                             HIRANO RYUSHIN
                         </h1>
                     </div>
-                    <p className="text-xl text-gray-400">| STUDENT</p>
+                    <p className="text-sm md:text-xl text-gray-400">| STUDENT</p>
                 </section>
 
                 {/* --- 取り組みセクション --- */}
@@ -83,7 +95,7 @@ export default function AboutPage() {
                     <h2 className="text-xl font-bold border-b border-black pb-2 mb-8 uppercase tracking-widest">学歴</h2>
                     <div className="space-y-3 text-sm">
                         {EDUCATION_DATA.map((edu, i) => (
-                            <div key={i} className="grid grid-cols-[140px_1fr]">
+                            <div key={i} className="grid grid-cols-[110px_1fr] md:grid-cols-[140px_1fr]">
                                 <span className="opacity-60">{edu.date}</span>
                                 <span>{edu.event}</span>
                             </div>
