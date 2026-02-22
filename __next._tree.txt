@@ -1,0 +1,6 @@
+:HL["/my-portfolio/_next/static/chunks/eb4fce35cb307313.css","style"]
+:HL["/my-portfolio/_next/static/media/Reitam%20Regular-s.p.b2b567dc.otf","font",{"crossOrigin":"","type":"font/otf"}]
+:HL["images/soundjump.png","image"]
+:HL["images/realbaseball.png","image"]
+:HL["images/morespace.png","image"]
+0:{"buildId":"e_7TLdkY7Xev8BSrKsVcJ","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
