@@ -21,7 +21,7 @@ const works = [
   {
     title: "KintaKintaiApp",
     tags: "Next.js,TypeScript,Firebase",
-    image: "images/kintakintaiapp.png",
+    image: "images/kintaKintaiApp.png",
     url: "https://kinta-kintai-logic-app.vercel.app"
   }
 ];
