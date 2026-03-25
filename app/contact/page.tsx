@@ -1,4 +1,4 @@
-"use client"; // クライアントコンポーネントとして動かすために必須
+"use client";
 
 import { useState } from "react";
 import Image from "next/image";

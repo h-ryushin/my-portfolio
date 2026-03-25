@@ -18,7 +18,12 @@ const works = [
     image: "images/morespace.png",
     url: "https://unityroom.com/games/morespace2"
   },
-  
+  {
+    title: "KintaKintaiApp",
+    tags: "Next.js,TypeScript,Firebase",
+    image: "images/kintakintaiapp.png",
+    url: "https://kinta-kintai-logic-app.vercel.app"
+  }
 ];
 export default function Home() {
   return (
