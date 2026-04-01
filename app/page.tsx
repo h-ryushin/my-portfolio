@@ -1,28 +1,29 @@
 import Link from 'next/link'
+import { PROJECTS_DATA, ProjectKey } from './lib/project';
 const works = [
   {
     title: "SoundJump",
     tags: "Unity, C#",
     image: "images/soundjump.png",
-    url: "https://unityroom.com/games/soundjump" // 遷移先のURLを追加
+    url: { pathname: '/soundjump' } // 遷移先のURLを追加
   },
   {
     title: "RealBaseBall",
     tags: "Unity, C#",
     image: "images/realbaseball.png",
-    url: "/works/baseball"
+    url: { pathname: '/realbaseball' } // 遷移先のURLを追加
   },
   {
     title: "MoreSpace!",
     tags: "Unity, C#, Photon",
     image: "images/morespace.png",
-    url: "https://unityroom.com/games/morespace2"
+    url: { pathname: '/morespace' } // 遷移先のURLを追加
   },
   {
     title: "KintaKintaiApp",
     tags: "Next.js,TypeScript,Firebase",
     image: "images/kintaKintaiApp.png",
-    url: "https://kinta-kintai-logic-app.vercel.app"
+    url:  { pathname: '/kintai' } // 遷移先のURLを追加
   }
 ];
 export default function Home() {
