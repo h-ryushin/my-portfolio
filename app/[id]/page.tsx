@@ -1,11 +1,10 @@
 import React from 'react';
-import { PROJECTS_DATA, ProjectKey } from '../lib/project'; // パスが違う場合は調整してね
+import { PROJECTS_DATA, ProjectKey } from '../lib/project'; 
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-// ① async をつける
 export default async function ProjectDetailPage({ params }: { params: Promise<{ id: string }> }) {
-  // ② ここで await して URL の ID を取り出す
+
   const { id } = await params;
 
   // ③ 辞書からデータを探す
@@ -18,9 +17,9 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
   }
 
   return (
-    <main className="min-h-screen p-30 bg-[#F0EBE3] text-slate-900">
+    <main className="min-h-screen p-4 md:p-20 bg-[#F0EBE3] text-slate-900 mt-30">
       <div className="max-w-5xl mx-auto bg-white rounded-[3rem] p-12 shadow-xl">
-        <div className="mb-6 flex justify-between items-center w-4xl">
+        <div className="mb-6 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
           <h1 className="text-4xl font-black">{project.title}</h1>
           <p className="text-xl font-black">制作日: {project.year}</p>
         </div>

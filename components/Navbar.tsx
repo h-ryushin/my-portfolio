@@ -1,25 +1,72 @@
-// src/components/Navbar.tsx
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 export const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  // メニュー項目を配列にしておくと管理が楽です
+  const navLinks = [
+    { name: "WORKS", href: "/" },
+    { name: "ABOUT", href: "/about" },
+    { name: "CONTACT", href: "/contact" },
+  ];
+
   return (
-    <header className="fixed top-0 w-full z-70 mt-5">
-      <div className="max-w-[95%] mx-auto px-8 h-20 flex justify-between items-center">
-        <Link href="/" className="hover:opacity-70 transition-opacity">
+    <header className="fixed top-0 w-full z-50 mt-2 md:mt-5">
+      <div className="max-w-[100%] mx-auto px-6 h-16 md:h-20 flex justify-between items-center relative">
+        
+        {/* ロゴ部分 */}
+        <Link href="/" className="hover:opacity-70 transition-opacity z-50">
           <img
             src="/images/icon.png"
             alt="Logo"
-            className="w-12 h-12 md:h-20 md:w-20 object-contain"
+            className="w-10 h-10 md:w-16 md:h-16 object-contain"
           />
         </Link>
-        <nav className="flex gap-12 font-medium tracking-[0.1em] text-[#a28d69]" style={{ fontSize: '1.4vw' }}>
-          <Link href="/" className="hover:opacity-70 transition-colors text-inherit">WORKS</Link>
-          <Link href="/about" className="hover:opacity-70 transition-colors text-inherit">ABOUT</Link>
-          <Link href="/contact" className="hover:opacity-70 transition-colors text-inherit">CONTACT</Link>
+
+        {/* --- PC用メニュー (md以上で表示) --- */}
+        <nav className="hidden md:flex gap-12 font-bold tracking-[0.1em] text-[#a28d69]">
+          {navLinks.map((link) => (
+            <Link key={link.name} href={link.href} className="hover:opacity-70 transition-colors text-lg">
+              {link.name}
+            </Link>
+          ))}
         </nav>
+
+        {/* --- スマホ用ハンバーガーボタン (md未満で表示) --- */}
+        <button
+          className="md:hidden z-50 p-2"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Menu"
+        >
+          {/* 三本線のアニメーション */}
+          <div className="w-6 h-5 flex flex-col justify-between overflow-hidden">
+            <span className={`w-full h-0.5 bg-[#a28d69] transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`} />
+            <span className={`w-full h-0.5 bg-[#a28d69] transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`} />
+            <span className={`w-full h-0.5 bg-[#a28d69] transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+          </div>
+        </button>
+
+        {/* --- スマホ用オーバーレイメニュー --- */}
+        <div className={`
+          fixed inset-0 bg-[#F0EBE3]/fb flex flex-col items-center justify-center gap-8 transition-all duration-500 md:hidden
+          ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}
+        `}
+        style={{ backgroundColor: 'rgba(240, 235, 227, 0.95)' }}
+        >
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              onClick={() => setIsOpen(false)} // クリックしたら閉じる
+              className="text-2xl font-black text-[#a28d69] tracking-widest"
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
       </div>
     </header>
   );
