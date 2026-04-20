@@ -66,5 +66,31 @@ export const PROJECTS_DATA = {
     link: "https://unityroom.com/games/realbaseball_sappu"
   },
 };
+export const works = [
+  {
+    title: "SoundJump",
+    tags: "Unity, C#",
+    image: "images/soundjump.png",
+    url: { pathname: '/soundjump' } // 遷移先のURLを追加
+  },
+  {
+    title: "RealBaseBall",
+    tags: "Unity, C#",
+    image: "images/realbaseball.png",
+    url: { pathname: '/realbaseball' } // 遷移先のURLを追加
+  },
+  {
+    title: "MoreSpace!",
+    tags: "Unity, C#, Photon",
+    image: "images/morespace.png",
+    url: { pathname: '/morespace' } // 遷移先のURLを追加
+  },
+  {
+    title: "KintaKintaiApp",
+    tags: "Next.js,TypeScript,Firebase",
+    image: "images/kintaKintaiApp.png",
+    url: { pathname: '/kintai' } // 遷移先のURLを追加
+  }
+];
 
 export type ProjectKey = keyof typeof PROJECTS_DATA;

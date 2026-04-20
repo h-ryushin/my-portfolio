@@ -3,20 +3,12 @@ import Image from 'next/image';
 import Education from '@/components/Education';
 import Skill from '@/components/Skill';
 import TimeLine from '@/components/TimeLine';
-
+import TopImage from '@/components/TopImage';
 
 export default function AboutPage() {
     return (
         <main className="min-h-screen bg-[#EBECE6] text-[#1a1a1a] pb-5 pt-0">
-            <section className="relative w-full h-[50vh] md:h-[100vh] overflow-hidden mb-20">
-                <Image
-                    src="/images/about-top.png"
-                    alt="about visual"
-                    fill
-                    className="object-cover object-[center_20%] md:object-center"
-                    priority
-                />
-            </section>
+           <TopImage src="/images/about-top.png" alt="about visual" />
 
             <div className="max-w-5xl mx-auto px-8 md:px-12">
                 <p className='text-2xl font-bold mb-5'

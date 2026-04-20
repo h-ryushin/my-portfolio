@@ -6,7 +6,7 @@ import localFont from "next/font/local";
 
 
 const reitam = localFont({
-  src: "../public/fonts/Reitam Regular.otf", // ここを実際のファイル名に変更
+  src: "../public/fonts/Reitam Regular.otf",
   variable: "--font-reitam", // CSS変数名
 });
 

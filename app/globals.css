@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow");
 @import url("https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500,700,800,900");
 @import "tailwindcss";
-@tailwind components;
 @tailwind utilities;
 
 

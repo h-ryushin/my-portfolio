@@ -1,5 +1,5 @@
 import React from 'react'
-import { EDUCATION_DATA } from '../app/lib/profile';
+import { EDUCATION_DATA } from '@/lib/profile';
 
 const Education = () => {
     return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { PROJECTS_DATA, ProjectKey } from '../lib/project'; 
+import { PROJECTS_DATA, ProjectKey } from '../../src/lib/project';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';

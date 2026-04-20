@@ -1,46 +1,14 @@
 "use client";
-
 import { useState } from "react";
 import Image from "next/image";
+import TopImage from "@/components/TopImage";
+import { useContactForm } from "@/hooks/useContactForm";
 
 export default function ContactPage() {
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [result, setResult] = useState("");
-
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-        setResult("送信中...");
-
-        const formData = new FormData(e.currentTarget);
-        // ここに取得した Access Key を入れてください
-        formData.append("access_key", "95d397f0-79db-49d1-b3ba-11460d4019d7");
-
-        const res = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        }).then((res) => res.json());
-
-        if (res.success) {
-            setResult("メッセージありがとうございます！無事に届きました。");
-            (e.target as HTMLFormElement).reset(); // フォームを空にする
-        } else {
-            setResult("エラーが発生しました。時間を置いて再度お試しください。");
-        }
-        setIsSubmitting(false);
-    };
-
+    const { isSubmitting, result, handleSubmit } = useContactForm();
     return (
         <main className="min-h-screen bg-[#EBECE6] text-[#1a1a1a] pb-32 pt-0">
-            <section className="relative w-full h-[50vh] md:h-screen overflow-hidden mb-20">
-                <Image
-                    src="/images/contact-top.png"
-                    alt="contact visual"
-                    fill
-                    className="object-cover object-[center_20%] md:object-center" 
-                    priority
-                />
-            </section>
+            <TopImage src="/images/contact-top.png" alt="contact visual" />
             <div className="max-w-4xl mx-auto px-8 md:px-12">
                 <section className="mb-16">
                     <p className="text-sm font-bold mb-2 tracking-widest">声をかける</p>
@@ -54,7 +22,7 @@ export default function ContactPage() {
                         <input
                             type="text"
                             id="name"
-                            name="name" // Web3Formsで識別するために必要
+                            name="name"
                             required
                             className="w-full h-16 bg-white border-none focus:ring-2 focus:ring-gray-400 px-4 transition-all normal-case font-sans"
                         />
@@ -66,7 +34,7 @@ export default function ContactPage() {
                         <input
                             type="email"
                             id="email"
-                            name="email" // Web3Formsで識別するために必要
+                            name="email"
                             required
                             className="w-full h-16 bg-white border-none focus:ring-2 focus:ring-gray-400 px-4 transition-all normal-case font-sans"
                         />
@@ -77,7 +45,7 @@ export default function ContactPage() {
                         <label htmlFor="message" className="text-xl tracking-widest uppercase">Message</label>
                         <textarea
                             id="message"
-                            name="message" // Web3Formsで識別するために必要
+                            name="message"
                             rows={6}
                             required
                             className="w-full bg-white border-none focus:ring-2 focus:ring-gray-400 p-4 transition-all normal-case font-sans"
@@ -88,14 +56,11 @@ export default function ContactPage() {
                         <button
                             type="submit"
                             disabled={isSubmitting}
-                            className={`px-12 py-4 bg-[#1a1a1a] text-white transition-colors tracking-widest text-sm ${
-                                isSubmitting ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-800"
-                            }`}
+                            className={`px-12 py-4 bg-[#1a1a1a] text-white transition-colors tracking-widest text-sm ${isSubmitting ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-800"
+                                }`}
                         >
                             {isSubmitting ? "SENDING..." : "SEND"}
                         </button>
-                        
-                        {/* 結果表示用メッセージ */}
                         {result && (
                             <p className={`text-sm font-bold ${result.includes("エラー") ? "text-red-500" : "text-gray-600"}`}>
                                 {result}

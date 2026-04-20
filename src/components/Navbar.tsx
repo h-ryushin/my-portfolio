@@ -35,13 +35,11 @@ export const Navbar = () => {
           ))}
         </nav>
 
-        {/* --- スマホ用ハンバーガーボタン (md未満で表示) --- */}
         <button
           className="md:hidden z-50 p-2"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Menu"
         >
-          {/* 三本線のアニメーション */}
           <div className="w-6 h-5 flex flex-col justify-between overflow-hidden">
             <span className={`w-full h-0.5 bg-[#a28d69] transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`} />
             <span className={`w-full h-0.5 bg-[#a28d69] transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`} />
