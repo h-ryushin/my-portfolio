@@ -7,7 +7,7 @@ import { useContactForm } from "@/hooks/useContactForm";
 export default function ContactPage() {
     const { isSubmitting, result, handleSubmit } = useContactForm();
     return (
-        <main className="min-h-screen bg-[#EBECE6] text-[#1a1a1a] pb-32 pt-0">
+        <main className="min-h-screen bg-[#EBECE6] text-[#1a1a1a] pt-0">
             <TopImage src="/images/contact-top.png" alt="contact visual " isTopViwer={false} />
             <div className="max-w-4xl mx-auto px-8 md:px-12">
                 <section className="mb-16">

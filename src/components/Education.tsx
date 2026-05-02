@@ -3,7 +3,7 @@ import { EDUCATION_DATA } from '@/lib/profile';
 
 const Education = () => {
     return (
-        <div className="mb-24">
+        <div className="">
             <h2 className="text-xl font-bold border-b border-black pb-2 mb-8 uppercase tracking-widest">学歴</h2>
             <div className="space-y-3 text-sm">
                 {EDUCATION_DATA.map((edu, i) => (

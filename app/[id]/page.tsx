@@ -7,7 +7,6 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
   const { id } = await params;
 
-  // ③ 辞書からデータを探す
   const projectKey = id as ProjectKey;
   const project = PROJECTS_DATA[projectKey];
 
@@ -23,7 +22,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           <h1 className="text-4xl font-black">{project.title}</h1>
           <p className="text-xl font-black">制作日: {project.year}</p>
         </div>
-        <Link href={project.link} className="text-blue-500 hover:underline">
+        {/* <Link href={project.link} className="text-blue-500 hover:underline ">
           <Image
             src={project.image}
             alt={project.title}
@@ -31,6 +30,22 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             height={300}
             className="rounded-lg mb-6"
           />
+        </Link> */}
+        <Link
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group block relative w-fit mb-10"
+        >
+          <div className="aspect-video bg-white rounded-sm overflow-hidden flex items-center justify-center border-4 border-gray-800 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.1)] transition-transform duration-200 group-hover:-translate-y-2">
+            <Image
+              src={project.image}
+              alt={project.title}
+              width={800}
+              height={450}
+              className="w-full h-full object-cover"
+            />
+          </div>
         </Link>
 
         <div className="space-y-8">

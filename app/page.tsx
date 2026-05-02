@@ -9,8 +9,6 @@ export default function Home() {
         {works.map((work, index) => (
           <Link href={work.url} key={index} className="group cursor-pointer">
             <div className="flex flex-col gap-4">
-
-              {/* 画像コンテナ */}
               <div className="aspect-video bg-white rounded-sm overflow-hidden flex items-center justify-center border-4 border-gray-800 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.1)] transition-transform duration-200 group-hover:-translate-y-2">
                 <img
                   src={work.image}
@@ -18,8 +16,6 @@ export default function Home() {
                   className="w-full h-full object-cover"
                 />
               </div>
-
-              {/* テキスト部分 */}
               <div className="mt-2">
                 <h3 className="text-2xl font-bold tracking-tight ">
                   {work.title}

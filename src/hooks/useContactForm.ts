@@ -1,4 +1,3 @@
-// hooks/useContactForm.ts
 import { useState } from "react";
 
 export const useContactForm = () => {
@@ -9,7 +8,7 @@ export const useContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setResult("送信中...");
-
+    
     const formData = new FormData(e.currentTarget);
     formData.append("access_key", "95d397f0-79db-49d1-b3ba-11460d4019d7");
 

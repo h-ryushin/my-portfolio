@@ -7,7 +7,7 @@ import localFont from "next/font/local";
 
 const reitam = localFont({
   src: "../public/fonts/Reitam Regular.otf",
-  variable: "--font-reitam", // CSS変数名
+  variable: "--font-reitam", 
 });
 
 export default function RootLayout({
