@@ -7,7 +7,7 @@ import localFont from "next/font/local";
 
 const reitam = localFont({
   src: "../public/fonts/Reitam Regular.otf",
-  variable: "--font-reitam", 
+  variable: "--font-reitam",
 });
 
 export default function RootLayout({
@@ -17,9 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body>
+      <body className={`${reitam.variable} min-h-screen flex flex-col`}>
         <Navbar />
-        {children}
+        <main className="flex-grow">
+          {children}
+        </main>
         <Footer></Footer>
       </body>
     </html>
