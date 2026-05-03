@@ -16,7 +16,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
   }
 
   return (
-    <main className="min-h-screen p-4 md:p-20 bg-[#F0EBE3] text-slate-900 mt-30">
+    <main className="min-h-screen p-4 md:p-20 text-slate-900 mt-30">
       <div className="max-w-5xl mx-auto bg-white rounded-[3rem] p-12 shadow-xl">
         <div className="mb-6 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
           <h1 className="text-4xl font-black">{project.title}</h1>

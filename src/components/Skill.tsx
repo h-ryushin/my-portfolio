@@ -8,7 +8,8 @@ const Skill = () => {
             <ul className="space-y-4">
                 {SKILLS_DATA.map((skill, i) => (
                     <li key={i} className="text-sm">
-                        <span className="font-bold">{skill.name}（{skill.level}）：</span>
+                        <span className="font-bold">{skill.name}:</span>
+                        <br />
                         <span className="opacity-80">{skill.desc}</span>
                     </li>
                 ))}

@@ -9,11 +9,11 @@ export const TIMELINE_DATA = [
 ];
 
 export const SKILLS_DATA = [
-    { name: "Python", level: "中級", desc: "FastAPIを勉強中。基本的なCRUD操作やトークンを用いた認証を用いたAPI開発が可能" },
-    { name: "HTML/CSS", level: "中級", desc: "Webサイトを依頼されてつくったことがある　中高生向け指導経験あり" },
-    { name: "React", level: "中級", desc: "Reactを用いたコンポーネント指向のWebアプリケーション開発が可能" },
-    { name: "Unity", level: "中級", desc: "2D・3Dゲームの基礎制作が可能　中高生向け指導経験あり" },
-    { name: "Git/GitHub", level: "中級", desc: "基本的なバージョン管理、チームコラボレーションが可能　チーム開発経験あり" },
+    { name: "Python", desc: "FastAPIを勉強中。基本的なCRUD操作やトークンを用いた認証を用いたAPI開発が可能" },
+    { name: "HTML/CSS", desc: "Webサイトを依頼されてつくったことがある　中高生向け指導経験あり" },
+    { name: "React", desc: "Reactを用いたコンポーネント指向のWebアプリケーション開発が可能" },
+    { name: "Unity", desc: "2D・3Dゲームの基礎制作が可能　中高生向け指導経験あり" },
+    { name: "Git/GitHub", desc: "基本的なバージョン管理、チームコラボレーションが可能　チーム開発経験あり" },
 ];
 
 export const EDUCATION_DATA = [

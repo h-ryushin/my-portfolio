@@ -7,7 +7,7 @@ import TopImage from '@/components/TopImage';
 
 export default function AboutPage() {
     return (
-        <main className="min-h-screen bg-[#EBECE6] text-[#1a1a1a] pt-0">
+        <main className="min-h-screen text-[#1a1a1a] pt-0">
            <TopImage src="/images/about-top.png" alt="about visual" isTopViwer={false} />
 
             <div className="max-w-5xl mx-auto px-8 md:px-12">
