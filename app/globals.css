@@ -6,7 +6,7 @@
 
 :root {
   /* スクリーンショットに近いベージュを定義 */
-  --background: #e9e9e2;
+  --background: #F0EBE3;
   --foreground: #1a1a1a;
 }
 
@@ -40,6 +40,6 @@ a {
 
   html {
     font-family: var(--font-reitam), "Yu Gothic", "Meiryo", sans-serif;
-    background-color: #ECECE6;
+    background-color: #F2F1ED;
   }
 }
