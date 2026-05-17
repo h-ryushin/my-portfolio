@@ -21,7 +21,7 @@ export const PROJECTS_DATA = {
     title: "勤怠管理アプリ (KINTAI DX)",
     isTeam: false,
     year: "2026年3月",
-    role: "（企画・実装・店舗導入）",
+    role: "企画・実装・店舗導入",
     points: [
       "24時を過ぎる深夜勤務の計算ロジックを独自実装",
       "忙しい現場でも入力できる音声認識機能の導入",
