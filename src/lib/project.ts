@@ -17,19 +17,35 @@ export const PROJECTS_DATA = {
     image: "/images/morespace.png",
     link: "https://unityroom.com/games/morespace2"
   },
+  // kintai: {
+  //   title: "勤怠管理アプリ (KINTAI DX)",
+  //   isTeam: false,
+  //   year: "2026年3月",
+  //   role: "企画・実装・店舗導入",
+  //   points: [
+  //     "24時を過ぎる深夜勤務の計算ロジックを独自実装",
+  //     "忙しい現場でも入力できる音声認識機能の導入",
+  //     "Firebaseを用いたリアルタイムなデータ保存"
+  //   ],
+  //   challenges: "毎月の手書き集計における時間ロスと計算ミスをゼロにするため、24時間を跨ぐ複雑なシフトの集計ロジックを型安全なTypeScriptで1から構築することに苦労しました。導入後は集計作業の完全自動化を達成しました。",
+  //   description: "アルバイト先の焼肉店において、従来すべて手計算で行われていた毎月の勤怠集計作業を効率化するために自発的に開発。現場のリアルな課題をITの仕組みで解決し、大幅な業務効率化に貢献したプロダクトです。",
+  //   tech: ["Next.js", "TypeScript", "Firebase", "Tailwind CSS"],
+  //   image: "/images/kintaKintaiApp.png",
+  //   link: "https://kinta-kintai-logic-app.vercel.app/nishieki"
+  // },
   kintai: {
-    title: "勤怠管理アプリ (KINTAI DX)",
+    title: "勤怠・人時売上管理システム (KINTAI DX)",
     isTeam: false,
     year: "2026年3月",
-    role: "企画・実装・店舗導入",
+    role: "企画・UI/UXデザイン・フルスタック実装・店舗導入",
     points: [
-      "24時を過ぎる深夜勤務の計算ロジックを独自実装",
-      "忙しい現場でも入力できる音声認識機能の導入",
-      "Firebaseを用いたリアルタイムなデータ保存"
+      "24時間を跨ぐ深夜勤務や休憩時間に対応した、高精度な給与計算ロジックを自作",
+      "端末操作が苦手な現場でも1秒で入力できる、Web Speech APIを活用した音声認識機能",
+      "Firebase (Firestore) を活用した、リアルタイムな店舗売上と人時売上の完全連動"
     ],
-    challenges: "毎月の手書き集計における時間ロスと計算ミスをゼロにするため、24時間を跨ぐ複雑なシフトの集計ロジックを型安全なTypeScriptで1から構築することに苦労しました。導入後は集計作業の完全自動化を達成しました。",
-    description: "アルバイト先の焼肉店において、従来すべて手計算で行われていた毎月の勤怠集計作業を効率化するために自発的に開発。現場のリアルな課題をITの仕組みで解決し、大幅な業務効率化に貢献したプロダクトです。",
-    tech: ["Next.js", "TypeScript", "Firebase", "Tailwind CSS"],
+    challenges: "従来の手書き集計における時間ロスや計算ミスを無くすため、日を跨ぐ深夜勤務の複雑な時間計算ロジックを、エッジケースまで網羅してTypeScriptで堅牢に実装することに注力しました。また、ITに馴染みのない店舗スタッフや店長が迷わず直感的に使えるよう、アクセシビリティに徹底的にこだわったUI/UXの設計に最も苦労しました。",
+    description: "アルバイト先の焼肉店において、毎月すべて手計算で行われていた勤怠集計と、人時売上の算出を自動化・デジタル化するために自発的に開発した個人プロジェクト。現場のリアルな課題をITに落とし込み、集計作業の完全自動化と、店舗経営におけるリアルタイムな生産性の可視化を達成。実際に店舗へ導入され運用されています。",
+    tech: ["Next.js", "TypeScript", "Firebase (Firestore)", "Tailwind CSS", "Web Speech API"],
     image: "/images/kintaKintaiApp.png",
     link: "https://kinta-kintai-logic-app.vercel.app/nishieki"
   },
